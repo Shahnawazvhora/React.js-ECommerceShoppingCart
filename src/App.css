@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-logo {
+  border-radius: 30px;
+  margin-left: 140px;
+  width: 40px;
+  height: 40px;
+}
+
+span {
+  top: 5px;
+}
+
+.product-img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.product-card {
+  width: 400px;
+  height: 600px;
+  border: 2px solid grey;
+}
+
+.shoping-cart {
+  filter: invert(1);
+  width: 40px;
+  height: 40px;
+  transform: scaleX(-1);
+}
+
+.shopping-items-top {
+  margin-top: 70px;
+  margin-right: 25%;
+}
+
+.cart-count {
+  top: 11px;
+}
+
+.shopping-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.navbar {
+  background: #219ebc;
+}
+
+.product-title {
+  color: #219ebc;
+  min-height: 78px;
+}
+
+.shopping-title {
+  color: #219ebc;
+}
+
+.text-price {
+  color: #219ebc !important;
+}
+
+.checkout-btn {
+  background-color: #219ebc !important;
+  border: #219ebc;
+}
+
+.empty-cart-img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.btn-buy-now>a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.card-cartotal-title {
+  color: #219ebc;
+}
+
+.shopping-cart {
+  margin-top: 100px;
+}
+
+.favicon {
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-color {
+  background-color: #219ebc !important
+}
+
+.scroll-top {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  left: 475px;
+  top: 575px;
+  font-size: 25px;
+  background-color: #219ebc;
+  border: none;
+  padding: 0;
+}
+
+.scroll-top:hover {
+  background-color: #1C85A0;
+}
+
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    /* position: fixed; */
+    z-index: 9999;
+}
