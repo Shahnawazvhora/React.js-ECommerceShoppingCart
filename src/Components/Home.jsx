@@ -10,6 +10,7 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [isScroll, setIsScroll] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -25,9 +26,32 @@ const Home = () => {
     })
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 700) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <>
-      <div className="container">
+      <div className="container py-5">
         {
           loading ? (
             <div className="loader-container d-flex align-items-center justify-content-center">
@@ -44,7 +68,7 @@ const Home = () => {
               </div>
             </div>
           ) : (
-            <div className="row mt-4">
+            <div className="row mt-5">
               {
                 posts.map((item, index) => {
                   return (
@@ -56,9 +80,14 @@ const Home = () => {
                   )
                 })
               }
-              <button className="btn btn-primary scroll-top" onClick={() => { window.scrollTo(0, 0); }}>
-                <FontAwesomeIcon icon={faCircleArrowUp} />
-              </button>
+              {isScroll && (
+                <button
+                  className="btn btn-primary scroll-top"
+                  onClick={handleScrollToTop}
+                >
+                  <FontAwesomeIcon icon={faCircleArrowUp} className='Arrow-up' />
+                </button>
+              )}
             </div>
           )
         }

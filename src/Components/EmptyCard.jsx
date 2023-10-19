@@ -8,7 +8,7 @@ const EmptyCard = () => {
         <div>
             <Navbar />
             <div className='d-flex justify-content-center'>
-                <img src={emptyCard} className="card-img-top empty-cart-img" alt="..." />
+                <img src={emptyCard} className="card-img-top empty-cart-img mt-5,M MQF<M<" alt="..." />
             </div>
             <h1 className='text-center fst-italic'>Kuch to kharid lo</h1>
             <div className='d-flex justify-content-center'>

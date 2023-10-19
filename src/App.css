@@ -56,6 +56,14 @@ span {
   top: 5px;
 }
 
+.user-auth {
+  position: fixed;
+  right: 8px;
+  top: 55px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+}
 .product-img {
   width: 300px;
   height: 300px;
@@ -74,6 +82,7 @@ span {
   width: 40px;
   height: 40px;
   transform: scaleX(-1);
+  margin-left: 1000px;
 }
 
 .shopping-items-top {
@@ -82,7 +91,7 @@ span {
 }
 
 .cart-count {
-  top: 11px;
+  top: 10px;
 }
 
 .shopping-image {
@@ -112,6 +121,11 @@ span {
 .checkout-btn {
   background-color: #219ebc !important;
   border: #219ebc;
+}
+
+.checkout-btn a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .empty-cart-img {
@@ -144,11 +158,12 @@ span {
 }
 
 .scroll-top {
-  position: relative;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
   width: 40px;
   height: 40px;
-  left: 475px;
-  top: 575px;
   font-size: 25px;
   background-color: #219ebc;
   border: none;
@@ -156,7 +171,7 @@ span {
 }
 
 .scroll-top:hover {
-  background-color: #1C85A0;
+  background-color: #1c85a0;
 }
 
 .loader-container {
@@ -164,22 +179,91 @@ span {
   height: 100vh;
   z-index: 9999;
 }
+
 .errorhandle {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .error {
   width: 500px;
   height: 500px;
   object-fit: cover;
 }
+
 .btn-tryagain {
   background-color: transparent;
   border: 2px solid #219ebc;
 }
+
 .btn-tryagain:hover {
   background-color: #219ebc;
   color: #fff;
+}
+
+.social-icons svg {
+  color: #219ebc;
+  transition: all 1s ease-in-out;
+}
+
+.btn-light a {
+  text-decoration: none;
+  color: #000;
+}
+
+.input-wrapper {
+  position: relative;
+  line-height: 14px;
+  margin: 0 10px;
+}
+
+.input-wrapper label {
+  color: #bbb;
+  font-size: 13px;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: 14px;
+  padding: 0 2px;
+  pointer-events: none;
+  background: white;
+  transition: transform 100ms ease;
+  transform: translateY(-20px);
+}
+
+.input-wrapper input {
+  font-size: 15px;
+  color: #555;
+  outline: none;
+  border: 1px solid #bbb;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.input-wrapper input:invalid+label {
+  transform: translateY(0);
+}
+
+.input-wrapper input:focus {
+  border-color: #3b71ca !important;
+  box-shadow: none;
+}
+
+.input-wrapper input:focus+label {
+  color: #3b71ca;
+  transform: translateY(-20px);
+}
+.input-wrapper input:-internal-autofill-selected {
+  background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+}
+.password-eye {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  background: none;
+  border: none;
+  font-size: 17px;
 }

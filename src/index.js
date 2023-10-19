@@ -5,13 +5,20 @@ import App from './App';
 import { Provider } from "react-redux";
 import { CartStore } from './redux/CartStore';
 import { Toaster } from 'react-hot-toast';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Auth0Provider
+    domain="dev-m7rbt63cbghnusx8.us.auth0.com"
+    clientId="qdARVFyEKJpXMDoiwF5NyNCy6Zg158jk"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
       <Provider store={CartStore}>
         <App />
         <Toaster />
       </Provider>
-  </React.StrictMode>
+  </Auth0Provider>
 );

@@ -34,8 +34,8 @@ const ShoppingCart = () => {
 
     return (
         <>
-            <div className="container">
-                <div className="row mt-4">
+            <div className="container pt-5">
+                <div className="row mt-5">
                     <div className="col-md-8" >
 
                         {
@@ -115,9 +115,9 @@ const ShoppingCart = () => {
                                 <h3 className="card-title fst-italic fw-normal">Your Cart Summary</h3>
                                 <h3 className="card-title fw-normal">Total Items: {cartItem.length}</h3>
                                 <h2 className='cart-title'>Total Amount: {totalPrice.toFixed(2)} $</h2>
-                                <button className='btn btn-primary checkout-btn border-0' onClick={() => {
-                                    handleCheckOut();
-                                }}>Checkout</button>
+                                <button className='btn btn-primary checkout-btn border-0' onClick={handleCheckOut}>
+                                    Checkout
+                                </button>
                             </div>
                         </div>
                     </div>
