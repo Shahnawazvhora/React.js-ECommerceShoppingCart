@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-logo {
+  border-radius: 30px;
+  margin-left: 140px;
+  width: 40px;
+  height: 40px;
+}
+
+span {
+  top: 5px;
+}
+
+.user-auth {
+  position: fixed;
+  right: 8px;
+  top: 55px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.product-img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.product-card {
+  width: 400px;
+  height: 600px;
+  border: 2px solid grey;
+}
+
+.shoping-cart {
+  filter: invert(1);
+  width: 40px;
+  height: 40px;
+  transform: scaleX(-1);
+  margin-left: 800px;
+}
+
+.shopping-items-top {
+  margin-top: 70px;
+  margin-right: 25%;
+}
+
+.cart-count {
+  top: 10px;
+}
+
+.shopping-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.navbar {
+  background: #219ebc !important;
+}
+
+.product-title {
+  color: #219ebc;
+  min-height: 78px;
+}
+
+.shopping-title {
+  color: #219ebc;
+}
+
+.text-price {
+  color: #219ebc !important;
+}
+
+.checkout-btn {
+  background-color: #219ebc !important;
+  border: #219ebc;
+}
+
+.checkout-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.empty-cart-img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.btn-buy-now>a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.card-cartotal-title {
+  color: #219ebc;
+}
+
+.shopping-cart {
+  margin-top: 100px;
+}
+
+.favicon {
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-color {
+  background-color: #219ebc !important
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  background-color: #219ebc;
+  border: none;
+  padding: 0;
+}
+
+.scroll-top:hover {
+  background-color: #1c85a0;
+}
+
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+}
+
+.errorhandle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.btn-tryagain {
+  background-color: transparent;
+  border: 2px solid #219ebc;
+}
+
+.btn-tryagain:hover {
+  background-color: #219ebc;
+  color: #fff;
+}
+
+.social-icons svg {
+  color: #219ebc;
+  transition: all 1s ease-in-out;
+}
+
+.btn-light a {
+  text-decoration: none;
+  color: #000;
+}
+
+.input-wrapper {
+  position: relative;
+  line-height: 14px;
+  margin: 0 10px;
+}
+
+.input-wrapper label {
+  color: #bbb;
+  font-size: 13px;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  top: 14px;
+  padding: 0 2px;
+  pointer-events: none;
+  background: white;
+  transition: transform 100ms ease;
+  transform: translateY(-20px);
+}
+
+.input-wrapper input {
+  font-size: 15px;
+  color: #555;
+  outline: none;
+  border: 1px solid #bbb;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.input-wrapper input:invalid+label {
+  transform: translateY(0);
+}
+
+.input-wrapper input:focus {
+  border-color: #3b71ca !important;
+  box-shadow: none;
+}
+
+.input-wrapper input:focus+label {
+  color: #3b71ca;
+  transform: translateY(-20px);
+}
+.input-wrapper input:-internal-autofill-selected {
+  background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+}
+.password-eye {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  background: none;
+  border: none;
+  font-size: 17px;
+}
